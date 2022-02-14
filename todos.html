@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todos.css">
+    <script src="todos.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <header class="header">
+        todos
+    </header>
+    <div class="main">
+        <div class="ipt">
+            <div class="checkAll">></div>
+            <textarea id="textarea" class="textarea" placeholder="What needs to be done?" contenteditable="true"></textarea>
+            <script>
+                var text = document.getElementById("textarea");
+                autoTextarea(text);// 调用
+            </script>
+            
+        </div>
+      
+        
+        
+        
+        <!-- <input class="ipt" placeholder="What needs to be done?"> -->
+    </div>
+    <footer class="footer">
+        <div>Double-click to edit a todo</div>
+        <div>Created by swordn</div>
+        <div>Part of <a href="http://todomvc.com">TodoMVC</a></div>
+    </footer>
+	
+    
+
+    
+</body>
+</html>

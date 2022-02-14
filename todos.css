@@ -1,0 +1,112 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font: 14px,'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #f5f5f5;
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+	
+}
+
+header  {
+    width: 100%;
+    height: 100px;
+    margin: 50px 0;
+    font-size: 100px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+}
+
+
+
+.main {
+	background: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+.ipt {
+	
+    display: flex;
+	width: 100%;
+    height: auto;
+	background: white;
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-size: 100px;
+    font-weight: 500;
+    text-align: center;
+}
+.checkAll {
+    width: 50px;
+    height: auto;
+    display: block;
+    font-size: 22px;
+    box-sizing: border-box;
+    padding: 16px 10px 16px 10px;
+    transform: rotate(90deg);
+    float: left;
+    font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+    
+}
+.textarea{
+
+    width: 500px;
+
+    min-height: 60px;
+
+    max-height: 300px;
+
+    outline: 0;
+
+    border: none;
+    padding: 16px 10px 16px 0px;
+	box-sizing: border-box;
+
+    word-wrap: break-word;
+
+    overflow: hidden;
+
+    font-size: 24px;
+	line-height: 1.4em;
+
+    float: left;
+}
+::-webkit-input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+::-moz-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+::input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+
+footer{
+    margin: 65px auto 0;
+    color: #bfbfbf;
+    font-size: 10px;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 50%);
+    text-align: center;
+}
+
