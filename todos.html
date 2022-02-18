@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="vieport" content="idth=device-idth, initial-scale=1.0">
     <link rel="stylesheet" href="todos.css">
+    <script src="/jquery.js"></script>
     <script src="todos.js"></script>
-    <script src="jquery.js"></script>
+    <title>Document</title>
 </head>
+
 <body>
     <header class="header">
         todos
     </header>
     <div class="main">
         <div class="ipt">
-            <div class="checkAll">></div>
-            <textarea id="textarea" class="textarea" placeholder="What needs to be done?" contenteditable="true"></textarea>
-            <script>
-                var text = document.getElementById("textarea");
-                autoTextarea(text);// 调用
-            </script>
+            <input class="checkAll" type="checkbox" >         
+            <input type="text" id="text" autocomplete="off" placeholder="What needs to be done?">
+        </div>
+        
+        <div class="list">
+            <a href="#" class="close"></a>
+            <div id="all" class="item" style="display: block;">
+                
+                <ol id="todolist" class="demo-box"></ol>
+                
+                <ul id="donelist">
+            </div>
+            <div id="active" class="item">
+                
+                <ol id="todolist" class="demo-box"></ol>
+            
+            </div>
+            <div id="completed" class="item">
+                
+                <ul id="donelist">
+            </div>
+            
+
             
         </div>
-      
-        
-        
-        
-        <!-- <input class="ipt" placeholder="What needs to be done?"> -->
+        <div class="tab">
+            <span id="allcount"></span>
+            <span>items left</span>
+            
+            <button id="all" style="margin-left: 50px;">All</button>
+            <button id="active">Active</b >
+            <button id="completed">Completed</button>
+			
+			<button id="clear-completed"  style="float: right;">Clear completed</button>
+		</div>
     </div>
+  
+
+    
+   
     <footer class="footer">
         <div>Double-click to edit a todo</div>
-        <div>Created by swordn</div>
+        <div>Created by sordn</div>
         <div>Part of <a href="http://todomvc.com">TodoMVC</a></div>
     </footer>
-	
-    
 
     
 </body>
+
 </html>

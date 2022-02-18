@@ -40,49 +40,82 @@ header  {
 	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
 
 	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	
     font-size: 100px;
     font-weight: 500;
     text-align: center;
+	border: none;
+    background: rgba(0, 0, 0, 0.003);
+    box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
 }
 .checkAll {
-    width: 50px;
-    height: auto;
-    display: block;
-    font-size: 22px;
-    box-sizing: border-box;
-    padding: 16px 10px 16px 10px;
-    transform: rotate(90deg);
-    float: left;
-    font-style: italic;
-	font-weight: 300;
-	color: #e6e6e6;
+    outline: none;
+  width: 30px;
+  height: 30px;
+  margin:20px;
+  border: solid 2px green;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  
+  cursor:pointer;
+  appearance:none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+	
+}
+.checkAll:checked {
+	background: green;
+	/* background: url("../../assets/images/checkbox_checked.png") no-repeat; */
+	background-size: 100% 100%;
+	
     
+  }
+
+
+
+.check {
+    outline: none;
+  width: 20px;
+  height: 20px;
+  margin:0 12px 0 12px;
+  border: solid 2px green;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  padding: 0;
+  cursor:pointer;
+  appearance:none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  user-select: none;	
+}  
+.check:checked {
+	background: green;
+	/* background: url("../../assets/images/checkbox_checked.png") no-repeat; */
+	background-size: 100% 100%;
+	
+    
+  }
+
+
+#text{
+	width: 500px;
+    padding: 16px 16px 16px 0px;
+    border: 0;
+	font-size: 24px;
+	
 }
-.textarea{
-
-    width: 500px;
-
-    min-height: 60px;
-
-    max-height: 300px;
-
-    outline: 0;
-
-    border: none;
-    padding: 16px 10px 16px 0px;
-	box-sizing: border-box;
-
-    word-wrap: break-word;
-
-    overflow: hidden;
-
-    font-size: 24px;
-	line-height: 1.4em;
-
-    float: left;
+input{
+	border: 0;  
+    outline: none; 
+    background-color: rgba(0, 0, 0, 0);
 }
+
+
+
 ::-webkit-input-placeholder {
 	font-style: italic;
 	font-weight: 300;
@@ -101,6 +134,34 @@ header  {
 	color: #e6e6e6;
 }
 
+.item {
+	display: none;
+}
+
+.tab {
+    color: #777;
+    padding: 10px 15px;
+    height: 20px;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+	display: block;
+}
+
+.tab button{
+	display: block;
+	color: inherit;
+    padding: 4px;
+	margin: 0 10px 0 10px;
+	float: left;
+	background-color: #fff;
+	border: none;
+}
+.tab span{
+	display: block;
+	float: left;
+	color: inherit;
+   
+}
 
 footer{
     margin: 65px auto 0;
@@ -108,5 +169,113 @@ footer{
     font-size: 10px;
     text-shadow: 0 1px 0 rgb(255 255 255 / 50%);
     text-align: center;
+}
+
+
+
+ol,ul {
+    padding: 0;
+    list-style: none;
+
+	
+}
+li {
+	display: block;
+	width: 100%;
+    height: auto;
+    line-height: 32px;
+    background: #fff;
+    position: relative;
+    margin-bottom: 10px;
+    
+    border-radius: 3px;
+    font-size: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+	
+}
+
+li input:first-child {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    height: 20px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+
+
+p {
+	word-wrap:break-word;/* 自动换行 */
+	display: block;
+	padding: 0 45px 0 45px;
+    margin: 0;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+}
+
+li p input {
+    top: 3px;
+    left: 40px;
+    width: 70%;
+    height: 20px;
+    line-height: 14px;
+    text-indent: 5px;
+    font-size: 14px;
+}
+
+
+
+ol li {
+    cursor: move;
+}
+
+ul li {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+
+
+.close {
+	position: absolute;
+    top: 0px;
+    right: 0;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+.close:before, .close:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 33px;
+	width: 2px;
+	background-color: #333;
+  }
+.close:before {
+	transform: rotate(45deg);
+  }
+.close:after {
+	transform: rotate(-45deg);
+  }
+
+
+.tab_list .current {
+	background-color: #c81623;
+	color: #fff;
+}
+
+.item_info {
+	padding: 20px 0 0 20px;
+}
+
+.item {
+	display: none;
+}
+
+.current{
+	!important border: 1px solid #ccc;
+	
 }
 
